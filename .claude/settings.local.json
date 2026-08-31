@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(gh search *)",
+      "WebFetch(domain:playwright.dev)",
+      "WebFetch(domain:stackoverflow.com)",
+      "WebFetch(domain:logrocket.com)",
+      "WebFetch(domain:web.archive.org)",
+      "WebFetch(domain:fcpxml.jeremygagnier.com)",
+      "WebFetch(domain:kdenlive.org)",
+      "WebFetch(domain:pypi.org)",
+      "WebFetch(domain:www.browserstack.com)",
+      "WebFetch(domain:www.ffmpeg.org)",
+      "Bash(python3 -c \"import urllib.request; print\\(urllib.request.urlopen\\('https://raw.githubusercontent.com/FFmpeg/FFmpeg/master/doc/filters.texi'\\).read\\(\\).decode\\('utf-8'\\)[:15000]\\)\")",
+      "WebFetch(domain:www.lambdatest.com)",
+      "WebFetch(domain:testguild.com)",
+      "WebFetch(domain:www.scaler.com)",
+      "WebFetch(domain:www.testpro.ai)",
+      "WebFetch(domain:www.automationstepbystep.com)",
+      "Bash(gh raw *)",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/microsoft/playwright/main/docs/src/authentication.md\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/microsoft/playwright/main/docs/src/retries.md\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/microsoft/playwright/main/docs/src/browser-contexts.md\")",
+      "Bash(curl -sL \"https://playwright.dev/docs/auth\")",
+      "Bash(curl -sL \"https://playwright.dev/docs/best-practices\")",
+      "Bash(curl -sL \"https://playwright.dev/docs/test-retries\")",
+      "Bash(curl -sL \"https://playwright.dev/docs/test-configuration\")",
+      "Bash(dir /s /b E:\\\\GrokVDO\\\\*.py)",
+      "Bash(findstr /v \"__pycache__\")",
+      "Bash(pip install *)",
+      "Bash(streamlit run *)",
+      "Bash(netstat -ano)",
+      "Bash(findstr :8501)",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git branch *)",
+      "Bash(git add *)"
+    ]
+  }
+}
