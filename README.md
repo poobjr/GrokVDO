@@ -2,14 +2,50 @@
 
 **AI Film Production Automation System** - A full-stack, modular automation layer for Grok/Flux video workflows.
 
+> 🎬 **Transform your scripts into consistent AI-generated videos with DNA Locking technology**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 ## Overview
 
 GrokFilmStudio solves the key challenges in AI-assisted film production:
 
-- **Context Drift**: Prompts lose consistency across shots
-- **Character Inconsistency**: Faces/appearances change between generations
-- **Camera Angle Randomness**: Uncontrolled shot composition
-- **Redundant Generation Credits**: Wasted tokens on repeated character descriptions
+| Problem | Solution |
+|---------|----------|
+| **Context Drift** | DNA Locking System keeps prompts consistent |
+| **Character Inconsistency** | Character Anchors lock identity across shots |
+| **Camera Randomness** | Automated camera inference from script |
+| **Token Waste** | Batch generation reuses DNA efficiently |
+
+## 🚀 Quick Start
+
+```bash
+# Clone the repo
+git clone https://github.com/poobjr/GrokVDO.git
+cd GrokVDO
+
+# Install dependencies
+pip install -e ".[all]"
+playwright install chromium
+
+# Configure credentials
+cp .env.example .env
+# Edit .env with your Grok credentials
+
+# Run the dashboard
+streamlit run ui/app.py
+```
+
+## 📚 Documentation
+
+| Document | Description |
+|----------|-------------|
+| [README.md](README.md) | This file - Overview & quick start |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | **Developer guide** - System architecture, data flow, extending |
+| [QUICKSTART.md](QUICKSTART.md) | Step-by-step tutorial for first project |
+| [DNA_LOCKING_GUIDE.md](DNA_LOCKING_GUIDE.md) | DNA Locking system guide (Thai) |
 
 ## Features
 
@@ -191,7 +227,7 @@ grokfilm export timeline PROJ_XXX --format all
 | `grokfilm export timeline` | Export FCPXML/EDL/XML |
 | `grokfilm export assembly` | Assemble final video |
 
-## Web Dashboard
+## 💻 Web Dashboard
 
 Start the Streamlit dashboard:
 
@@ -200,13 +236,22 @@ streamlit run ui/app.py
 ```
 
 The dashboard provides:
-- Visual project management
-- Character/style editor
-- Script parser interface
-- Shot list inspector
-- Prompt preview
-- Generation monitoring
-- Timeline export
+- 📁 Visual project management
+- 🎭 Character/style editor
+- 📜 Script parser interface
+- 🎬 Shot list inspector
+- ✏️ Prompt preview with DNA locking
+- 🚀 Generation monitoring
+- 📤 Timeline export
+
+## 👨‍💻 For Developers
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed documentation on:
+- System architecture and data flow
+- DNA Locking implementation
+- Extending the system (new providers, formats)
+- Testing strategy
+- Best practices
 
 ## Project Structure
 
