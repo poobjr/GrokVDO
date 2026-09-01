@@ -122,7 +122,7 @@ def sidebar():
 
     page = st.sidebar.radio(
         "Go to:",
-        ["Overview", "Production Bible", "Script & Shots", "Prompt Compiler", "Generate", "Export"],
+        ["Overview", "Production Bible", "Character Sheet Builder", "Script & Shots", "Prompt Compiler", "Generate", "Export"],
         key="page_selector",
     )
 
@@ -511,6 +511,23 @@ def page_export():
         st.info("FFmpeg assembly would run here")
 
 
+# Import Character Sheet Builder
+from grokfilmstudio.models.character_sheet import CharacterSheet, CharacterSheetBuilder
+
+
+def page_character_sheet_builder():
+    """Render Character Sheet Builder page."""
+    st.markdown('<p class="main-header">Character Sheet Builder</p>', unsafe_allow_html=True)
+
+    if not st.session_state.current_project:
+        st.info("Select a project first.")
+        return
+
+    # Import the dedicated builder module
+    from ui.character_sheet_builder import render_character_sheet_builder
+    render_character_sheet_builder()
+
+
 # Main app
 def main():
     init_session_state()
@@ -521,6 +538,8 @@ def main():
         page_overview()
     elif page == "Production Bible":
         page_production_bible()
+    elif page == "Character Sheet Builder":
+        page_character_sheet_builder()
     elif page == "Script & Shots":
         page_script_shots()
     elif page == "Prompt Compiler":
